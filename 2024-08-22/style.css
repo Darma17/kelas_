@@ -1,0 +1,14 @@
+.header {
+    background-color: wheat;
+    height: 100px;
+}
+
+.content {
+    background-color: yellow;
+    height: 300px;
+}
+
+.footer {
+    background-color: fuchsia;
+    height: 100px;
+}
