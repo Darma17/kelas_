@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    width: 80%;
+    overflow: auto;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .game-container {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .cell[data-angka="2"] {
+    background-color: #F7F7F7; /* Abu-abu muda */
+    color: #333;
+  }
+  
+  .cell[data-angka="4"] {
+    background-color: #C9E4CA; /* Hijau pastel muda */
+    color: #333;
+  }
+  
+  .cell[data-angka="8"] {
+    background-color: #8BC34A; /* Hijau limau */
+    color: #fff;
+  }
+  
+  .cell[data-angka="16"] {
+    background-color: #3E8E41; /* Hijau tua */
+    color: #fff;
+  }
+  
+  .cell[data-angka="32"] {
+    background-color: #2E865F; /* Hijau biru */
+    color: #fff;
+  }
+  
+  .cell[data-angka="64"] {
+    background-color: #1A8D5F; /* Hijau gelap */
+    color: #fff;
+  }
+  
+  .cell[data-angka="128"] {
+    background-color: #0C7F32; /* Hijau zamrud */
+    color: #fff;
+  }
+  
+  .cell[data-angka="256"] {
+    background-color: #056328; /* Hijau emerald */
+    color: #fff;
+  }
+  
+  .cell[data-angka="512"] {
+    background-color: #034C24; /* Hijau navy */
+    color: #fff;
+  }
+  
+  .cell[data-angka="1024"] {
+    background-color: #01321A; /* Hijau gelap */
+    color: #fff;
+  }
+  
+  .cell[data-angka="2048"] {
+    background-color: #002B13; /* Hijau hitam */
+    color: #fff;
+  }
+  
+  button {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .cell.animate {
+    transform: scale(1.1);
+  }
+
+  .cara-bermain {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cara-bermain h2 {
+    margin-top: 0;
+  }
+  
+  .cara-bermain ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cara-bermain li {
+    margin-bottom: 10px;
+  }
+  
+  .cara-bermain li:before {
+    content: "• ";
+  }
+
+  /* Responsif untuk layar besar */
+@media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .game-container {
+      width: 60%;
+    }
+    .cara-bermain {
+      width: 40%;
+    }
+  }
+  
+  /* Responsif untuk layar kecil */
+  @media (max-width: 480px) {
+    .game-container {
+      margin-bottom: 10px;
+    }
+    .cara-bermain {
+      padding: 10px;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table thead tr {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+table th, table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 14px;
+    }
+}
